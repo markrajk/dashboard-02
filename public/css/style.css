@@ -615,7 +615,7 @@ a:focus {
       transition: transform 0.2s ease-in-out 0.1s; }
 
 .header {
-  padding: 3.4rem 1.7rem 0.5rem 3.2rem;
+  padding: 3.6rem 1.7rem 0.5rem 3.2rem;
   font-size: 1.6rem;
   border-bottom: 1px solid #e1e1e1; }
   .header-top {
@@ -703,7 +703,7 @@ a:focus {
   .header-bottom {
     display: flex;
     align-items: center;
-    padding: 2rem 0 1rem;
+    padding: 4.8rem 0 1rem;
     margin-right: -1.6rem; }
     .header-bottom .choose {
       display: flex;
@@ -722,7 +722,7 @@ a:focus {
           margin-right: 0.8rem;
           font-size: 1.8rem; }
         .header-bottom .choose a:not(:last-child) {
-          margin-right: 3rem; }
+          margin-right: 2.6rem; }
     .header-bottom .dropdown {
       margin-right: 1.2rem; }
     .header-bottom .dropdown-toggle {
@@ -774,72 +774,94 @@ a:focus {
     border-bottom: 1px solid #ccc; }
 
 .teams-main-view {
-  max-width: 95rem;
-  padding: 3.2rem;
-  height: calc(100vh - 16.3rem - 4px - 3rem);
-  display: grid;
-  grid-template-areas: "card-1 card-2 card-3";
-  grid-auto-rows: 27rem;
-  grid-gap: 2rem 0;
-  overflow-y: auto;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */ }
-  .teams-main-view::-webkit-scrollbar {
-    /* WebKit */
-    width: 0;
-    height: 0; }
-  @media (max-width: 991px) {
-    .teams-main-view {
-      grid-template-areas: "card-1 card-2"; } }
-  @media (max-width: 575px) {
-    .teams-main-view {
-      padding: 1rem;
-      grid-template-areas: "card-1"; } }
+  max-width: 110rem;
+  padding: 2.1rem 3.2rem; }
+  .teams-main-view-header {
+    margin-bottom: 3.8rem; }
+    .teams-main-view-header .btn-custom-primary {
+      margin-right: 1.1rem;
+      font-size: 1.4rem;
+      line-height: 1.36;
+      padding: .7rem 1.6rem;
+      border-radius: 3px;
+      background-color: #0f2882; }
+    .teams-main-view-header .input-container {
+      position: relative;
+      display: inline-block; }
+      .teams-main-view-header .input-container input {
+        padding: .7rem 2.8rem;
+        padding-right: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 1.36;
+        border-radius: 3px;
+        border: solid 1px #c1c7cd; }
+      .teams-main-view-header .input-container i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        font-size: 1.5rem;
+        transform: translate(50%, -50%); }
+  .teams-main-view-body {
+    height: calc(100vh - 30rem);
+    display: grid;
+    grid-template-areas: "card-1 card-2 card-3";
+    grid-auto-rows: 24rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem 0rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */ }
+    .teams-main-view-body::-webkit-scrollbar {
+      width: 0;
+      height: 0; }
+    @media (max-width: 991px) {
+      .teams-main-view-body {
+        grid-template-areas: "card-1 card-2";
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 575px) {
+      .teams-main-view-body {
+        padding: 1rem;
+        grid-template-areas: "card-1";
+        grid-template-columns: repeat(1, 1fr); } }
   .teams-main-view .graph-card {
-    padding: 2.7rem;
-    padding-top: 1.8rem;
     height: 100%; }
     .teams-main-view .graph-card-header {
       height: auto;
       padding: 0; }
       .teams-main-view .graph-card-header h4 {
         margin-bottom: .2rem;
-        color: #137EFE;
-        font-size: .9rem;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.3;
+        color: #137efe;
         text-transform: uppercase; }
       .teams-main-view .graph-card-header h3 {
         margin: 0;
         padding: 0;
-        opacity: 0.96;
-        font-size: 2.1rem;
-        font-weight: 500;
-        line-height: 1.1;
-        letter-spacing: 0.21px;
-        color: #1c1c1c;
-        white-space: nowrap; }
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.32;
+        color: #323539; }
     .teams-main-view .graph-card-body {
-      padding: 2.2rem 1.7rem;
-      padding-left: 1rem;
+      padding: 2.8rem 1.7rem;
+      padding-right: 8rem;
+      padding-left: 2.3rem;
       height: calc(100% - 4.6rem); }
+      .teams-main-view .graph-card-body .bar:first-of-type, .teams-main-view .graph-card-body .bar:first-of-type + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar {
+        display: none; }
       @media (max-width: 1439px) {
-        .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar + .bar {
+        .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar + .bar {
           display: none; } }
-      @media (max-width: 1720px) {
-        .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar {
+      @media (max-width: 1199px) {
+        .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar + .bar + .bar {
           display: none; } }
-      @media (max-width: 1900px) {
-        .teams-main-view .graph-card-body .bar:first-of-type, .teams-main-view .graph-card-body .bar:first-of-type + .bar {
-          display: none; } }
-      @media (max-width: 575px) {
-        .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar {
-          display: inline-block; } }
-      @media (max-width: 767px) {
-        .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar {
-          display: inline-block; } }
       @media (max-width: 991px) {
-        .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar + .bar {
+        .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar + .bar + .bar {
+          display: inline-block; } }
+      @media (max-width: 575px) {
+        .teams-main-view .graph-card-body .bar:first-of-type + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar + .bar + .bar {
           display: inline-block; } }
   .teams-main-view .table {
     display: none;
