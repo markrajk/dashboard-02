@@ -615,7 +615,7 @@ a:focus {
       transition: transform 0.2s ease-in-out 0.1s; }
 
 .header {
-  padding: 3.6rem 1.7rem 0.5rem 3.2rem;
+  padding: 3.4rem 3.2rem 0.5rem 3.6rem;
   font-size: 1.6rem;
   border-bottom: 1px solid #e1e1e1; }
   .header-top {
@@ -775,7 +775,7 @@ a:focus {
 
 .teams-main-view {
   max-width: 110rem;
-  padding: 2.1rem 3.2rem; }
+  padding: 2.1rem 3.6rem; }
   .teams-main-view-header {
     margin-bottom: 3.8rem; }
     .teams-main-view-header .btn-custom-primary {
